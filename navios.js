@@ -1,0 +1,60 @@
+// Navios do jogo original (Edson Maia). lat/lon em graus: Norte e Leste positivos, Sul e Oeste negativos.
+// cor = missão: green (1), orange (2), gold (3), purple (4)
+window.NAVIOS = [
+  // Missão 1 · Atlântico Norte Oeste
+  {id:0, cor:'green', lat:0,  lon:0,    tipo:'comercial', local:'Atlântico Norte Oeste'},
+  {id:1, cor:'green', lat:0,  lon:-40,  tipo:'turismo',   local:'Atlântico Norte Oeste'},
+  {id:2, cor:'green', lat:10, lon:-40,  tipo:'militar',   local:'Atlântico Norte Oeste'},
+  {id:3, cor:'green', lat:20, lon:-60,  tipo:'pirataria', local:'Atlântico Norte Oeste'},
+  {id:4, cor:'green', lat:30, lon:-20,  tipo:'pesca',     local:'Atlântico Norte Oeste'},
+  {id:5, cor:'green', lat:45, lon:0,    tipo:'turismo',   local:'Atlântico Norte Oeste'},
+  {id:6, cor:'green', lat:50, lon:-40,  tipo:'comercial', local:'Atlântico Norte Oeste'},
+  {id:7, cor:'green', lat:60, lon:0,    tipo:'militar',   local:'Atlântico Norte Oeste'},
+  {id:8, cor:'green', lat:60, lon:-20,  tipo:'comercial', local:'Atlântico Norte Oeste'},
+  {id:9, cor:'green', lat:70, lon:-60,  tipo:'turismo',   local:'Atlântico Norte Oeste'},
+  // Missão 1 · Pacífico Norte Oeste
+  {id:10, cor:'green', lat:0,  lon:-160, tipo:'pirataria', local:'Pacífico Norte Oeste'},
+  {id:11, cor:'green', lat:10, lon:-100, tipo:'comercial', local:'Pacífico Norte Oeste'},
+  {id:12, cor:'green', lat:20, lon:-160, tipo:'turismo',   local:'Pacífico Norte Oeste'},
+  {id:13, cor:'green', lat:30, lon:-120, tipo:'militar',   local:'Pacífico Norte Oeste'},
+  {id:14, cor:'green', lat:40, lon:-140, tipo:'pesca',     local:'Pacífico Norte Oeste'},
+  {id:15, cor:'green', lat:50, lon:-160, tipo:'comercial', local:'Pacífico Norte Oeste'},
+  // Missão 2 · Oceanos e Mares do Norte para o Leste
+  {id:16, cor:'orange', lat:0,  lon:80,  tipo:'militar',   local:'Índico'},
+  {id:17, cor:'orange', lat:0,  lon:160, tipo:'turismo',   local:'Pacífico Norte, Mares do Norte'},
+  {id:18, cor:'orange', lat:10, lon:60,  tipo:'pirataria', local:'Índico'},
+  {id:19, cor:'orange', lat:10, lon:120, tipo:'comercial', local:'Pacífico Norte Leste'},
+  {id:20, cor:'orange', lat:20, lon:40,  tipo:'comercial', local:'Mares do Norte - Mar Vermelho'},
+  {id:21, cor:'orange', lat:30, lon:20,  tipo:'turismo',   local:'Mares do Norte - Mar Mediterrâneo'},
+  {id:22, cor:'orange', lat:30, lon:160, tipo:'militar',   local:'Pacífico Norte Leste'},
+  {id:23, cor:'orange', lat:40, lon:20,  tipo:'turismo',   local:'Mares do Norte - Mar Mediterrâneo'},
+  {id:24, cor:'orange', lat:40, lon:140, tipo:'turismo',   local:'Pacífico Norte Leste'},
+  {id:25, cor:'orange', lat:70, lon:20,  tipo:'comercial', local:'Mares do Norte'},
+  {id:26, cor:'orange', lat:80, lon:40,  tipo:'militar',   local:'Mares do Norte'},
+  {id:27, cor:'orange', lat:80, lon:80,  tipo:'pesca',     local:'Mares do Norte'},
+  // Missão 3 · Atlântico Sul Oeste
+  {id:28, cor:'gold', lat:-10, lon:-20,  tipo:'comercial', local:'Atlântico Sul Oeste'},
+  {id:29, cor:'gold', lat:-20, lon:0,    tipo:'militar',   local:'Atlântico Sul Oeste'},
+  {id:30, cor:'gold', lat:-20, lon:-40,  tipo:'turismo',   local:'Atlântico Sul Oeste'},
+  {id:31, cor:'gold', lat:-30, lon:-20,  tipo:'pirataria', local:'Atlântico Sul Oeste'},
+  {id:32, cor:'gold', lat:-40, lon:-60,  tipo:'turismo',   local:'Atlântico Sul Oeste'},
+  {id:33, cor:'gold', lat:-50, lon:-60,  tipo:'comercial', local:'Atlântico Sul Oeste'},
+  {id:34, cor:'gold', lat:-70, lon:0,    tipo:'militar',   local:'Atlântico Sul Oeste'},
+  // Missão 3 · Pacífico Sul Oeste
+  {id:35, cor:'gold', lat:-10, lon:-80,  tipo:'turismo',   local:'Pacífico Sul Oeste'},
+  {id:36, cor:'gold', lat:-20, lon:-100, tipo:'comercial', local:'Pacífico Sul Oeste'},
+  {id:37, cor:'gold', lat:-20, lon:-150, tipo:'militar',   local:'Pacífico Sul Oeste'},
+  {id:38, cor:'gold', lat:-40, lon:-140, tipo:'pesca',     local:'Pacífico Sul Oeste'},
+  {id:39, cor:'gold', lat:-60, lon:-120, tipo:'comercial', local:'Pacífico Sul Oeste'},
+  // Missão 4 · Índico e Pacífico Sul Leste
+  {id:40, cor:'purple', lat:-10, lon:100, tipo:'pirataria', local:'Índico'},
+  {id:41, cor:'purple', lat:-10, lon:140, tipo:'comercial', local:'Índico'},
+  {id:42, cor:'purple', lat:-20, lon:60,  tipo:'turismo',   local:'Índico'},
+  {id:43, cor:'purple', lat:-30, lon:40,  tipo:'comercial', local:'Índico'},
+  {id:44, cor:'purple', lat:-30, lon:160, tipo:'turismo',   local:'Pacífico Sul Leste'},
+  {id:45, cor:'purple', lat:-40, lon:20,  tipo:'militar',   local:'Atlântico Sul Leste'},
+  {id:46, cor:'purple', lat:-40, lon:120, tipo:'militar',   local:'Índico'},
+  {id:47, cor:'purple', lat:-40, lon:180, tipo:'turismo',   local:'Pacífico Sul Leste'},
+  {id:48, cor:'purple', lat:-50, lon:160, tipo:'comercial', local:'Pacífico Sul Leste'},
+  {id:49, cor:'purple', lat:-60, lon:80,  tipo:'pesca',     local:'Índico'}
+];
