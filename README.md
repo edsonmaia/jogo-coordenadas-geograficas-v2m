@@ -11,7 +11,7 @@ Criado por **Edson Maia** (versão original de 2021, reformulada em 2026).
 3. Clique em **Jogar** ou pressione Enter.
 4. Encontre todos os navios ilegais de cada missão para ganhar a insígnia e as estrelas.
 
-Dicas: clicar no mapa preenche as coordenadas, e as setas ↑/↓ nos campos mudam o valor de 10 em 10° (latitude) ou de 20 em 20° (longitude).
+Dicas: clicar no mapa preenche as coordenadas, e as setas ↑/↓ e os botões − e + mudam o valor de 5 em 5° (Shift + seta: de 1 em 1°).
 
 ## No celular
 

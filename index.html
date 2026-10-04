@@ -693,7 +693,7 @@ let fxTeste;$('volEfeitos').oninput=e=>{SOM.volumeEfeitos(e.target.value/100);si
 $('btnEfeitos').onclick=()=>{if(!SOM.pref.efeitos&&SOM.pref.volEfeitos===0)SOM.pref.volEfeitos=.6;SOM.alternarEfeitos();sincSom();SOM.tocar('clique')};
 sincSom();
 // limitação dos campos: só inteiros, latitude 0–90, longitude 0–180
-const CAMPOS={lat:{el:$('lat'),dica:$('dicaLat'),max:90,passo:10,txt:'De 0° a 90°'},lon:{el:$('lon'),dica:$('dicaLon'),max:180,passo:20,txt:'De 0° a 180°'}};
+const CAMPOS={lat:{el:$('lat'),dica:$('dicaLat'),max:90,passo:5,txt:'De 0° a 90°'},lon:{el:$('lon'),dica:$('dicaLon'),max:180,passo:5,txt:'De 0° a 180°'}};
 function avisar(c,msg){
   c.el.classList.remove('erro');void c.el.offsetWidth;c.el.classList.add('erro');
   c.dica.textContent=msg;c.dica.classList.add('erro');
