@@ -15,7 +15,7 @@ Dicas: clicar no mapa preenche as coordenadas, e as setas ↑/↓ nos campos mud
 
 ## No celular
 
-Funciona com o celular deitado (paisagem). O mapa ocupa a tela inteira, e o botão **Painel** abre as coordenadas, as missões, o placar e o som. Use os botões **−** e **+** ou toque no mapa e depois em **Jogar**.
+Funciona com o celular deitado (paisagem). As missões, o placar e as insígnias ficam na barra do alto da tela, e a latitude, a longitude e o botão **Jogar** ficam na barra de baixo, sempre à vista. Escolha a missão nos botões **1** a **4**, toque no mapa ou use os botões **−** e **+** para definir as coordenadas, troque o hemisfério (N/S, E/W) com um toque e depois toque em **Jogar**. O volume da música e dos efeitos abre no botão de ajustes, no canto superior direito, ao lado do botão de ajuda.
 
 Para instalar como app, abra o endereço do jogo no celular. No Android (Chrome), toque em ⋮ e depois em **Instalar app**. No iPhone (Safari), toque em Compartilhar e depois em **Adicionar à Tela de Início**. Depois da primeira visita, o jogo funciona sem internet.
 
