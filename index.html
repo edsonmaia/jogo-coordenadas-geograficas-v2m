@@ -56,7 +56,7 @@ h2{font-size:22px;font-weight:800;margin:10px 0}
 .legenda{font-size:13px;color:#bbb;margin:8px 0 0;text-align:center}
 .mapwrap{background:#fff;border-radius:10px;padding:6px;position:relative}
 .barra{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;min-height:44px;padding:4px 8px 0;color:#14212a;font-weight:700;font-size:16px}
-.vertudo{display:none;align-items:center;gap:6px;height:40px;padding:0 16px;border:0;border-radius:8px;background:#191919;color:#fff;font:700 15px Montserrat,sans-serif;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.vertudo{display:flex;align-items:center;gap:6px;height:40px;padding:0 16px;border:0;border-radius:8px;background:#191919;color:#fff;font:700 15px Montserrat,sans-serif;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.3)}
 .vertudo:hover{background:#333}
 .sons{display:flex;gap:14px;margin-left:auto;flex-wrap:wrap;justify-content:flex-end}
 .vol{display:flex;align-items:center;gap:8px;background:#f3f2ee;border-radius:10px;padding:3px 10px 3px 3px}
@@ -92,7 +92,43 @@ button:focus-visible,select:focus-visible{outline:3px solid #ffd54a!important;ou
 .creditos li b{color:#111}
 .creditos a{color:#1f5fbf}.creditos a:hover{color:#14212a}
 .versao{display:inline-block;background:#14212a;color:#fff;font-size:13px;font-weight:800;border-radius:20px;padding:4px 12px;margin-bottom:10px}
-.passo,.menu,.mpts,.mjogar,.veu,.girar,.mfechar,.sons-h{display:none}
+.passo,.menu,.mpts,.mjogar,.veu,.girar,.mfechar,.sons-h,.hem,#coordBar,.mtop,.mbtn,#popSom{display:none}
+body.m aside,body.m .veu,body.m .menu,body.m .mjogar,body.m #vistaNome{display:none!important}
+body.m .barra{overflow-x:auto;scrollbar-width:none}
+body.m .barra::-webkit-scrollbar{display:none}
+body.m .mtop{display:flex;align-items:center;gap:4px;flex:none}
+body.m .mtop+.mtop{padding-left:8px;border-left:1px solid #3a3a3a}
+body.m .mesp{flex:1;min-width:4px}
+body.m .mtop .missions{display:flex;gap:5px}
+body.m .mtop .missions button{width:38px;height:38px;font-size:16px;gap:3px;border-radius:8px;outline-width:2px}
+body.m .mtop .missions button svg{width:11px;height:11px}
+body.m .mtop .score{display:flex;gap:3px;margin:0}
+body.m .mtop .score .chip{width:22px;height:22px;font-size:14px;border-width:1px}
+body.m .mtop .score .chip.got{transform:none}
+body.m .mtop .insignias{display:flex;gap:4px;margin:0}
+body.m .mtop .insignias svg{width:28px;height:28px}
+body.m .mpts{display:flex;height:38px;padding:0 10px}
+body.m .mbtn{display:grid;place-items:center;width:40px;height:40px;flex:none;border:0;border-radius:8px;background:#2e2e2e;color:#fff;font-size:22px;cursor:pointer}
+body.m .mbtn[aria-expanded="true"]{background:#fff;color:#14212a}
+#verTudo.oculto{display:none!important}
+body.m .vertudo{width:40px;padding:0;justify-content:center;font-size:22px}
+body.m #popSom{position:fixed;top:54px;right:calc(8px + env(safe-area-inset-right));z-index:9;background:#191919;border:1px solid #3a3a3a;border-radius:12px;padding:10px;box-shadow:0 8px 24px rgba(0,0,0,.5);width:260px}
+body.m.som-aberto #popSom{display:block}
+body.m #popSom .sons{display:flex;flex-direction:column;gap:8px;margin:0}
+body.m #popSom .vol{background:#2a2a2a;padding:6px 12px 6px 6px}
+body.m #popSom .vol button{width:44px;height:44px;background:#fff}
+body.m #popSom .vol input[type=range]{flex:1;width:auto;height:8px;background:linear-gradient(90deg,#fff var(--v,50%),#555 var(--v,50%))}
+body.m #popSom .vol input[type=range]::-webkit-slider-thumb{width:26px;height:26px}
+body.m #popSom .pct{color:#fff}
+body.m #coordBar{display:flex;align-items:center;gap:14px;flex:none;background:#191919;color:#fff;padding:6px calc(8px + env(safe-area-inset-right)) calc(6px + env(safe-area-inset-bottom)) calc(8px + env(safe-area-inset-left));overflow-x:auto;scrollbar-width:none}
+body.m #coordBar .cb{display:flex;align-items:center;gap:6px;flex:none}
+body.m #coordBar .cbl{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#bbb;line-height:1.1;width:62px}
+body.m #coordBar .row{flex-wrap:nowrap;gap:4px}
+body.m #coordBar .row .passo{width:44px;height:44px;font-size:26px}
+body.m #coordBar .row input{flex:none;width:58px;height:44px;font-size:21px;padding:0 4px}
+body.m #coordBar .row select{display:none}
+body.m #coordBar .hem{display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:10px;color:#fff;font:800 19px Montserrat,sans-serif;cursor:pointer;flex:none}
+body.m #coordBar .play{width:auto;height:46px;margin:0 0 0 auto;padding:0 22px;font-size:20px;flex:none}
 body.m{overflow:hidden;height:100dvh;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 body.m .app{display:block;padding:0;max-width:none}
 body.m .side{display:none}
@@ -241,7 +277,7 @@ html{background:#191919}
     <div class="acoes sons-h" style="display:none" id="ajudaGaveta"><button class="sec" id="abrirBoas" style="background:#2e2e2e;color:#fff;border-color:#555">Instruções</button><button class="sec" id="abrirCred" style="background:#2e2e2e;color:#fff;border-color:#555">Créditos</button></div>
   </aside>
   <div class="veu" id="veu"></div>
-  <main class="mapwrap"><div class="barra"><button class="menu" id="btnMenu" aria-controls="painel" aria-expanded="false"><span class="ms" aria-hidden="true">menu</span>Painel</button><span id="vistaNome">Mapa inteiro</span><button id="verTudo" class="vertudo">Ver mapa inteiro</button><span class="mpts" aria-label="Placar"><span class="ms" aria-hidden="true">star</span><span id="mpts">0</span></span><button class="mjogar vazio" id="mjogar"><span class="ms" aria-hidden="true">my_location</span><span>Jogar<br><small id="mjogarTxt">Toque no mapa</small></span></button><div class="sons"><div class="vol"><button id="btnMusica" class="ms" aria-pressed="true" aria-label="Música de fundo" title="Música de fundo">music_note</button><input id="volMusica" type="range" min="0" max="100" step="5" aria-label="Volume da música"><span id="pctMusica" class="pct"></span></div><div class="vol"><button id="btnEfeitos" class="ms" aria-pressed="true" aria-label="Efeitos sonoros" title="Efeitos sonoros">volume_up</button><input id="volEfeitos" type="range" min="0" max="100" step="5" aria-label="Volume dos efeitos"><span id="pctEfeitos" class="pct"></span></div></div></div><svg id="map" role="img" aria-label="Mapa-múndi com grade de latitude e longitude e navios nos oceanos"></svg></main>
+  <main class="mapwrap"><div class="barra"><button class="menu" id="btnMenu" aria-controls="painel" aria-expanded="false"><span class="ms" aria-hidden="true">menu</span>Painel</button><span id="vistaNome">Mapa inteiro</span><div class="mtop" id="mtMis" aria-label="Missões"></div><div class="mtop" id="mtPlacar" aria-label="Placar"></div><div class="mtop" id="mtIns" aria-label="Insígnias"></div><span class="mesp mtop" style="border:0;padding:0"></span><button id="verTudo" class="vertudo oculto">Ver mapa inteiro</button><span class="mpts" aria-label="Placar"><span class="ms" aria-hidden="true">star</span><span id="mpts">0</span></span><button class="mjogar vazio" id="mjogar"><span class="ms" aria-hidden="true">my_location</span><span>Jogar<br><small id="mjogarTxt">Toque no mapa</small></span></button><button class="mbtn ms" id="btnSom" aria-label="Volume da música e dos efeitos" aria-expanded="false" aria-controls="popSom">tune</button><button class="mbtn ms" id="btnAjuda" aria-label="Instruções e créditos">help</button><div class="sons"><div class="vol"><button id="btnMusica" class="ms" aria-pressed="true" aria-label="Música de fundo" title="Música de fundo">music_note</button><input id="volMusica" type="range" min="0" max="100" step="5" aria-label="Volume da música"><span id="pctMusica" class="pct"></span></div><div class="vol"><button id="btnEfeitos" class="ms" aria-pressed="true" aria-label="Efeitos sonoros" title="Efeitos sonoros">volume_up</button><input id="volEfeitos" type="range" min="0" max="100" step="5" aria-label="Volume dos efeitos"><span id="pctEfeitos" class="pct"></span></div></div></div><div id="mTopo" style="display:contents"></div><svg id="map" role="img" aria-label="Mapa-múndi com grade de latitude e longitude e navios nos oceanos"></svg><div id="coordBar" aria-label="Coordenadas"><div class="cb"><span class="cbl">Latitude<br>0° a 90°</span><div id="cbLat"></div></div><div class="cb"><span class="cbl">Longitude<br>0° a 180°</span><div id="cbLon"></div></div><div id="cbPlay" style="margin-left:auto;display:flex"></div></div><div id="popSom" role="dialog" aria-label="Volume"></div></main>
   <div class="side">
     <div class="card">
       <h3>Instrução inicial</h3>
@@ -467,7 +503,7 @@ function aplicarVista(v){
     .attr('x2',d=>d.id[0]==='t'||d.id[0]==='b'?d.x:d.id[0]==='l'?M:M+FW+6)
     .attr('y1',d=>d.id[0]==='t'?M-6:d.id[0]==='b'?M+FH:telaY(+d.id.slice(1)))
     .attr('y2',d=>d.id[0]==='t'?M:d.id[0]==='b'?M+FH+6:telaY(+d.id.slice(1)));
-  $('verTudo').style.display=k>1.01?'flex':'none';
+  $('verTudo').classList.toggle('oculto',!(k>1.01));
   $('vistaNome').textContent=k>1.01&&missao?`Missão ${missao.n} · ${missao.titulo}`:'Mapa inteiro';
 }
 
@@ -590,6 +626,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')fecharGaveta()});
 function atualizarFab(){
   const la=$('lat').value,lo=$('lon').value,ok=la!==''&&lo!=='';
   $('mjogar').classList.toggle('vazio',!ok);
+  sincHem();
   $('mjogarTxt').textContent=ok?`${la}°${$('latH').value} ${lo}°${$('lonH').value}`:(la!==''||lo!==''?'Complete no painel':'Toque no mapa');
 }
 ['lat','lon','latH','lonH'].forEach(id=>$(id).addEventListener('input',atualizarFab));
@@ -608,20 +645,35 @@ function telaBoasVindas(){
     <div class="cols">
       <div><p style="margin:0">Nos Oceanos e Mares temos navios Comerciais, Militares e de Turismo. Mas, também temos navios que praticam Pesca Ilegal e a Pirataria.</p>
         <div class="tipos"><span>${chip('comercial')}Comercial</span><span>${chip('militar')}Militar</span><span>${chip('turismo')}Turismo</span><span>${chip('pesca')}Pesca Ilegal</span><span>${chip('pirataria')}Pirataria</span></div></div>
-      <div><ol><li>Abra o <b>Painel</b> e escolha uma missão.</li><li>Toque no mapa ou use os botões <b>−</b> e <b>+</b> para definir latitude e longitude.</li><li>Toque em <b>Jogar</b> para inspecionar o navio.</li></ol>
+      <div><ol><li>Escolha uma missão nos botões <b>1</b> a <b>4</b>, no alto da tela.</li><li>Toque no mapa ou use os botões <b>−</b> e <b>+</b> para definir latitude e longitude.</li><li>Toque em <b>Jogar</b> para inspecionar o navio.</li></ol>
         <p style="margin:10px 0 0">Saudações Geográficas e até a próxima missão!</p></div>
     </div>
     <div class="acoes"><button class="pri" id="comecar">Começar</button><button class="sec" id="telaCheia">Tela cheia</button><button class="sec" id="boasCred">Créditos</button></div></div>`);
-  $('comecar').onclick=()=>{fechar();abrirGaveta()};$('comecar').focus({preventScroll:true});$('mbox').scrollTop=0;
+  $('comecar').onclick=()=>{fechar()};$('comecar').focus({preventScroll:true});$('mbox').scrollTop=0;
   $('boasCred').onclick=()=>{fechar();$('btnCreditos').click()};
   const tc=$('telaCheia');if(!document.documentElement.requestFullscreen||document.fullscreenElement)tc.remove();
   else tc.onclick=async()=>{try{await document.documentElement.requestFullscreen();await screen.orientation.lock('landscape')}catch(e){}tc.remove()};
 }
 $('abrirBoas').onclick=()=>{fecharGaveta();telaBoasVindas()};
 $('abrirCred').onclick=()=>{fecharGaveta();$('btnCreditos').click()};
+const MOVER=[['missions','mtMis'],['score','mtPlacar'],['insignias','mtIns']].map(([a,b])=>({el:$(a),dest:$(b)}));
+MOVER.push({el:$('lat').closest('.row'),dest:$('cbLat')},{el:$('lon').closest('.row'),dest:$('cbLon')},{el:$('play'),dest:$('cbPlay')},{el:document.querySelector('.sons'),dest:$('popSom')});
+MOVER.forEach(o=>{o.marca=document.createComment('pos');o.el.parentNode.insertBefore(o.marca,o.el)});
+$('mtPlacar').appendChild(document.querySelector('.mpts'));
+// botões de hemisfério (N/S, E/W) que trocam o select
+['latH','lonH'].forEach(id=>{const s=$(id),b=document.createElement('button');b.type='button';b.className='hem';b.id=id+'B';
+  b.onclick=()=>{s.value=s.options[s.selectedIndex===0?1:0].value;s.dispatchEvent(new Event('change'));atualizarFab();SOM.tocar('clique')};s.after(b)});
+function sincHem(){[['latH','#8b0b0b','Hemisfério Norte','Hemisfério Sul'],['lonH','#0c1a8a','Hemisfério Leste','Hemisfério Oeste']].forEach(([id,bg,a,z])=>{const s=$(id),b=$(id+'B');b.textContent=s.value;b.style.background=bg;b.setAttribute('aria-label',(s.selectedIndex===0?a:z)+', tocar para trocar')})}
+function fecharSom(){document.body.classList.remove('som-aberto');$('btnSom').setAttribute('aria-expanded','false')}
+$('btnSom').onclick=e=>{e.stopPropagation();const ab=!document.body.classList.contains('som-aberto');document.body.classList.toggle('som-aberto',ab);$('btnSom').setAttribute('aria-expanded',ab)};
+document.addEventListener('pointerdown',e=>{if(!e.target.closest('#popSom,#btnSom'))fecharSom()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')fecharSom()});
+$('btnAjuda').onclick=()=>{fecharSom();telaBoasVindas()};
 function aplicarModo(){
   MOB=mqMob.matches;document.body.classList.toggle('m',MOB);
-  const sons=document.querySelector('.sons');(MOB?$('sonsGaveta'):document.querySelector('.barra')).appendChild(sons);
+  MOVER.forEach(o=>MOB?o.dest.appendChild(o.el):o.marca.after(o.el));
+  const vt=$('verTudo');vt.classList.toggle('ms',MOB);vt.textContent=MOB?'zoom_out_map':'Ver mapa inteiro';vt.setAttribute('aria-label','Ver mapa inteiro');
+  if(!MOB)fecharSom();
   $('ajudaGaveta').style.display=MOB?'flex':'none';
   ['lat','lon'].forEach(id=>{$(id).readOnly=MOB;$(id).inputMode=MOB?'none':'numeric'});
   if(!MOB)fecharGaveta();
